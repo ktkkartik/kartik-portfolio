@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+
+  <!-- External Styles and Libraries -->
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("dehSmJOJLxR9vseN8"); // replace with your public key from EmailJS
+  })();
+</script>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="css/contact.css">
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #2d2e32;
+      color: white;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #25262a;
+      padding: 20px 0;
+    }
+
+    .footer1 {
+      background-color: #25262a;
+      display: flex;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-bar">
+      <a href="index.html" class="logo navLogo">
+        <img src="images/logo.png" alt="kartik logo" style="height: 50px;">
+      </a>
+      <div class="menu">
+        <div class="logo-toggle">
+          <span class="logo"><a href="index.html">Kartik</a></span>
+          <i class='bx bx-x sidebarClose'></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </div>
+      <div class="contact-us-btn">
+        <a href="contact.html" id="conbtn">Contact Us</a>
+        <i class='bx bx-menu sidebarOpen'></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container" style="padding: 97px 40px;">
+      <div class="left-section">
+        <div class="contact-heading">
+          <h3 style="font-size: 16px; color: #64FAAB;">--Contact Me</h3>
+        </div>
+        <div class="touch-heading pt-4">
+          <h1 style="font-size: 38px; font-weight: bold;">
+            Get in touch with me
+          </h1>
+        </div>
+        <div class="description pt-2">
+          <p style="line-height: 26px; font-size: 18px;">
+            Let’s Connect! <br>
+            Have a project in mind or just want to say hello? I’d love to hear from you! Whether you need a 
+            frontend developer to bring your ideas to life or want to chat about web technologies, feel free 
+            to reach out. Drop me a message, and I’ll get back to you as soon as possible. 
+            Let’s build something amazing together!
+          </p>
+        </div>
+        <div class="contact-info d-flex">
+          <div class="email-div">
+            <h3>email</h3>
+            <p>ktk221102@gmail.com</p>
+            <p>try.kartikk@gmail.com</p>
+          </div>
+          <div class="phone-div">
+            <h3>phone</h3>
+            <p>+91 7070539355</p>
+            <p>+91 7061968428</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="container">
+          <form id="contact-form">
+            <div class="row input-container">
+              <div class="col-md-6 col-sm-12">
+                <div class="styled-input">
+                  <input type="text" name="user_name" placeholder="Full Name" required />
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="styled-input" style="float:right;">
+                  <input type="email" name="user_email" placeholder="Email" required />
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <div class="styled-input wide">
+                  <textarea name="message" placeholder="Message" required></textarea>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                <button type="submit" class="conbtn" style="width: fit-content;">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer1">
+      <div class="logo_sec">
+        <a href="index.html" class="logo navLogo">
+          <img src="images/logo.png" alt="kartik logo" style="height: 50px; margin-left: 50px;">
+        </a>
+      </div>
+      <div class="infoo">
+        <h3 style="color: white; margin-right: 50px;">Hasta la vista!</h3>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/contact-script.js"></script>
+</body>
+</html>
