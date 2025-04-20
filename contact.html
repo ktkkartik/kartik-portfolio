@@ -68,8 +68,11 @@
         </div>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-        </ul>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="myblog.html">Blog</a></li>
+          <li><a href="peopleiworkwith.html">People I Work With</a></li>
+      </ul>
       </div>
       <div class="contact-us-btn">
         <a href="contact.html" id="conbtn">Contact Us</a>
@@ -114,16 +117,20 @@
       </div>
       <div class="right-section">
         <div class="container">
-          <form id="contact-form">
+          <form 
+            id="contact-form"
+            action="https://formspree.io/f/mgvaggzg"
+            method="POST"
+          >
             <div class="row input-container">
               <div class="col-md-6 col-sm-12">
                 <div class="styled-input">
-                  <input type="text" name="user_name" placeholder="Full Name" required />
+                  <input type="text" name="name" placeholder="Full Name" required />
                 </div>
               </div>
               <div class="col-md-6 col-sm-12">
                 <div class="styled-input" style="float:right;">
-                  <input type="email" name="user_email" placeholder="Email" required />
+                  <input type="email" name="email" placeholder="Email" required />
                 </div>
               </div>
               <div class="col-xs-12">
@@ -138,6 +145,14 @@
           </form>
         </div>
       </div>
+<!-- Popup Message -->
+<div id="thankPopup" class="popup-overlay">
+  <div class="popup-content">
+    <h2>Thank you, <span id="userName"></span>!</h2>
+    <p>We appreciate you reaching out. We'll get back to you shortly.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>      
       
   </main>
 

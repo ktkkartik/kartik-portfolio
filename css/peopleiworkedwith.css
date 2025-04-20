@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+nav {
+  position: relative;
+  padding: 47px 14px;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #2d2e32;
+  z-index: 100;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--text-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar .nav-links li {
+  margin: 0 5px;
+  list-style: none;
+}
+
+/* Adding hover animation to navbar links */
+.nav-links li a {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffaf29; /* Hover color for links */
+  transform: scale(1.1); /* Subtle scaling effect */
+  animation: sparkling 1.5s infinite; /* Sparkling animation */
+}
+
+/* Sparkling effect keyframes */
+@keyframes sparkling {
+  0% {
+      box-shadow: 0 0 5px #ffaf29, 0 0 10px #ffaf29, 0 0 15px #ffaf29;
+  }
+  25% {
+      box-shadow: 0 0 10px #ffaf29, 0 0 20px #ffaf29, 0 0 30px #ffaf29;
+  }
+  50% {
+      box-shadow: 0 0 15px #ffaf29, 0 0 25px #ffaf29, 0 0 40px #ffaf29;
+  }
+  75% {
+      box-shadow: 0 0 20px #ffaf29, 0 0 35px #ffaf29, 0 0 50px #ffaf29;
+  }
+  100% {
+      box-shadow: 0 0 25px #ffaf29, 0 0 40px #ffaf29, 0 0 60px #ffaf29;
+  }
+}
+
+/* Contact Us button animation */
+#conbtn {
+  font-size: 18px;
+  font-weight: 500;
+  color: #25262a;
+  font-family: "Montserrat", Sans-serif;
+  background-color: #ffaf29;
+  color: #25262a;
+  border-radius: 1em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 black;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#conbtn:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  background-color: #e39d22; /* Darker shade on hover */
+  animation: sparkling 1.5s infinite; /* Sparkling animation */
+}
+
+:root {
+  --body-color: #2d2e32;
+  --text-color: #FFF;
+  --accent-color: #ffaf29;
+}
+
+.people-section {
+  padding: 60px 20px;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.people-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.person-card {
+  background-color: #ffffff0c;
+  border-radius: 16px;
+  padding: 20px;
+  width: 250px;
+  color: var(--text-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.person-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid var(--accent-color);
+}
+
+.person-card h3 {
+  font-size: 1.25rem;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+.person-card p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+
+.person-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.person-card a:hover {
+  background-color: #e89d21;
+}
+
+footer {
+    background-color: #25262a;
+    padding: 20px 0;
+  }
+
+  .footer1 {
+    background-color: #25262a;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }

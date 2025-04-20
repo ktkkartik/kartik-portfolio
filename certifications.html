@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/certifications.css">
+
+
+    <!-- External Styles and Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+ 
+    <title>Certifications</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+          <a href="index.html" class="logo navLogo">
+            <img src="images/logo.png" alt="kartik logo" style="height: 50px;">
+          </a>
+          <div class="menu">
+            <div class="logo-toggle">
+              <span class="logo"><a href="index.html">Kartik</a></span>
+              <i class='bx bx-x sidebarClose'></i>
+            </div>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="certifications.html">Certifications</a></li>
+              <li><a href="myblog.html">Blog</a></li>
+              <li><a href="peopleiworkwith.html">People I Work With</a></li>
+          </ul>
+          </div>
+          <div class="contact-us-btn">
+            <a href="contact.html" id="conbtn">Contact Us</a>
+            <i class='bx bx-menu sidebarOpen'></i>
+          </div>
+        </div>
+      </nav>
+
+      <!--main content-->
+      <div class="certifications-section">
+        <h2 class="section-title">My Certifications</h2>
+      
+        <div class="certifications-container">
+      
+          <!-- Certification Card -->
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="ReactJS">
+            <h3>ReactJS</h3>
+            <p>Infosys</p>
+            <span class="view-icon" onclick="openPopup('cert1')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python 3">
+            <h3>Python 3 Programming</h3>
+            <p>Coursera - University of Michigan</p>
+            <span class="view-icon" onclick="openPopup('cert2')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968322.png" alt="Node.js">
+            <h3>Node.js</h3>
+            <p>Infosys</p>
+            <span class="view-icon" onclick="openPopup('cert3')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/919/919831.png" alt="Data Analytics">
+            <h3>Intro to Data Analytics</h3>
+            <p>Coursera - IBM</p>
+            <span class="view-icon" onclick="openPopup('cert4')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript">
+            <h3>JavaScript</h3>
+            <p>Infosys</p>
+            <span class="view-icon" onclick="openPopup('cert5')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/906/906324.png" alt="Data Visualization">
+            <h3>Data Visualization</h3>
+            <p>Coursera - IBM</p>
+            <span class="view-icon" onclick="openPopup('cert6')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="React Native">
+            <h3>React Native</h3>
+            <p>Infosys</p>
+            <span class="view-icon" onclick="openPopup('cert7')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/3080/3080244.png" alt="BI">
+            <h3>Business Intelligence</h3>
+            <p>Coursera - Macquarie University</p>
+            <span class="view-icon" onclick="openPopup('cert8')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/732/732084.png" alt="Intel">
+            <h3>Empower Lives with Tech</h3>
+            <p>Intel.digital</p>
+            <span class="view-icon" onclick="openPopup('cert9')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/1532/1532635.png" alt="Nestle">
+            <h3>Sustainability</h3>
+            <p>Nestlé E-Learning</p>
+            <span class="view-icon" onclick="openPopup('cert10')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/2210/2210153.png" alt="AI for Entrepreneurs">
+            <h3>AI for Entrepreneurship</h3>
+            <p>Skill India - Intel</p>
+            <span class="view-icon" onclick="openPopup('cert11')">&#128065;</span>
+          </div>
+      
+          <div class="cert-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" alt="Angular">
+            <h3>Angular</h3>
+            <p>Infosys</p>
+            <span class="view-icon" onclick="openPopup('cert12')">&#128065;</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Popups (use your real cert image URLs) -->
+      <div id="popup-cert1" class="popup"><span class="close" onclick="closePopup('cert1')">&times;</span><img src="images/certificates/reactjs.png"></div>
+      <div id="popup-cert2" class="popup"><span class="close" onclick="closePopup('cert2')">&times;</span><img src="images/certificates/python.png"></div>
+      <div id="popup-cert3" class="popup"><span class="close" onclick="closePopup('cert3')">&times;</span><img src="images/certificates/nodejs.png"></div>
+      <div id="popup-cert4" class="popup"><span class="close" onclick="closePopup('cert4')">&times;</span><img src="images/certificates/ibmdata.png"></div>
+      <div id="popup-cert5" class="popup"><span class="close" onclick="closePopup('cert5')">&times;</span><img src="images/certificates/javascript.png"></div>
+      <div id="popup-cert6" class="popup"><span class="close" onclick="closePopup('cert6')">&times;</span><img src="images/certificates/ibmdatavisual.png"></div>
+      <div id="popup-cert7" class="popup"><span class="close" onclick="closePopup('cert7')">&times;</span><img src="images/certificates/reactnative.png"></div>
+      <div id="popup-cert8" class="popup"><span class="close" onclick="closePopup('cert8')">&times;</span><img src="images/certificates/businessintelligence.png"></div>
+      <div id="popup-cert9" class="popup"><span class="close" onclick="closePopup('cert9')">&times;</span><img src="images/certificates/intelempower.png"></div>
+      <div id="popup-cert10" class="popup"><span class="close" onclick="closePopup('cert10')">&times;</span><img src="images/certificates/nestle.png"></div>
+      <div id="popup-cert11" class="popup"><span class="close" onclick="closePopup('cert11')">&times;</span><img src="images/certificates/skillindia.png"></div>
+      <div id="popup-cert12" class="popup"><span class="close" onclick="closePopup('cert12')">&times;</span><img src="images/certificates/angular.png"></div>
+      
+      <!-- JS -->
+      <script>
+        function openPopup(certId) {
+          document.getElementById(`popup-${certId}`).style.display = "flex";
+        }
+      
+        function closePopup(certId) {
+          document.getElementById(`popup-${certId}`).style.display = "none";
+        }
+      </script>
+      
+      <!-- footer section  -->
+  <div class="footer1">
+
+    <div class="logo_sec">
+        <a href="index.html" class="logo navLogo">
+            <img src="images/logo.png" alt="kartik logo" style="height: 50px; margin-left: 50px;">
+</a>
+
+    </div>
+    <div class="infoo">
+        <h3 style="color: white; margin-right: 40px;">Hasta la vista!</h3>
+     </div>
+    </div>
+</div>
+</body>
+</html>

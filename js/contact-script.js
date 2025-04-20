@@ -1,15 +1,32 @@
+const form = document.getElementById("contact-form");
+const popup = document.getElementById("thankPopup");
+const userNameSpan = document.getElementById("userName");
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  const name = data.get("name");
+  const action = form.action;
 
-    emailjs.sendForm('service_c72dcod', 'template_clb9eyd', this)
-      .then(function(response) {
-         alert("Message sent successfully!");
-      }, function(error) {
-         alert("FAILED to send message.\n" + JSON.stringify(error));
-      });
-
-    // Optional: Reset the form
-    this.reset();
+  fetch(action, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" },
+  })
+  .then((response) => {
+    if (response.ok) {
+      form.reset();
+      userNameSpan.textContent = name;
+      popup.style.display = "flex";
+    } else {
+      alert("Oops! There was a problem submitting your form.");
+    }
+  })
+  .catch(() => {
+    alert("Something went wrong. Please try again later.");
   });
+});
 
+function closePopup() {
+  popup.style.display = "none";
+}
