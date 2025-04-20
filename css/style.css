@@ -167,7 +167,7 @@ nav .nav-bar .logo a {
         left: -100%;
         top: 0;
         padding: 20px;
-        background-color: var(--side-nav);
+        background-color: #2d2e32;
         z-index: 100;
         transition: all 0.4s ease;
     }
@@ -576,7 +576,7 @@ button:hover .star-6 {
 }
 
 i {
-    color: #18f98f;
+    color: var(--side-nav);
     font-size: 2.5em;
     text-align: center;
 }
@@ -610,21 +610,123 @@ span.text {
     }
 }
 
-@media screen and (max-width: 768px) {
+/* Mobile Responsiveness Enhancements */
 
-    .containerx {
+@media screen and (max-width: 768px) {
+    .main-text h1 {
+        font-size: 50px;
+    }
+
+    .paragraph p {
         font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-section {
+        padding: 10px;
+    }
+
+    .contact-button a,
+    .cv-button a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    button {
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .center-button {
+        height: 200px;
+    }
+
+    .wrapperx {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .footer1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .otheracc {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .wrapperx {
+    .main-text h1 {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .intro h2 {
+        font-size: 18px;
+    }
+
+    .paragraph p {
+        font-size: 13px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    nav .nav-bar {
+        padding: 0 15px;
+    }
+
+    #conbtn {
+        font-size: 15px;
+        padding: 0.8em 1.5em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 90px;
+        height: 45px;
+    }
+
+    .star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
+        width: 4px;
     }
 
     .containerx {
-        font-size: 8px;
+        font-size: 10px;
+    }
+
+    span.num {
+        font-size: 48px;
+    }
+
+    span.text {
+        font-size: 16px;
     }
 }
+
 /* footer  */
 .footer1{ 
     margin-top: 34px;

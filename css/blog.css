@@ -1,135 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  nav {
-    position: relative;
-    padding: 47px 14px;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 100%;
-    background-color: #2d2e32;
-    z-index: 100;
-  }
-  
-  nav .nav-bar {
-    position: relative;
-    height: 100%;
-    max-width: 100%;
-    width: 100%;
-    background-color: var(--nav-color);
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  nav .nav-bar .sidebarOpen {
-    color: var(--text-color);
-    font-size: 25px;
-    padding: 5px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  nav .nav-bar .logo a {
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-  }
-  
-  .menu .logo-toggle {
-    display: none;
-  }
-  
-  .nav-bar .nav-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-bar .nav-links li {
-    margin: 0 5px;
-    list-style: none;
-  }
-  
-  /* Adding hover animation to navbar links */
-  .nav-links li a {
-    position: relative;
-    font-size: 17px;
-    font-weight: 400;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #ffaf29; /* Hover color for links */
-    transform: scale(1.1); /* Subtle scaling effect */
-    animation: sparkling 1.5s infinite; /* Sparkling animation */
-  }
-  
-  /* Sparkling effect keyframes */
-  @keyframes sparkling {
-    0% {
-        box-shadow: 0 0 5px #ffaf29, 0 0 10px #ffaf29, 0 0 15px #ffaf29;
-    }
-    25% {
-        box-shadow: 0 0 10px #ffaf29, 0 0 20px #ffaf29, 0 0 30px #ffaf29;
-    }
-    50% {
-        box-shadow: 0 0 15px #ffaf29, 0 0 25px #ffaf29, 0 0 40px #ffaf29;
-    }
-    75% {
-        box-shadow: 0 0 20px #ffaf29, 0 0 35px #ffaf29, 0 0 50px #ffaf29;
-    }
-    100% {
-        box-shadow: 0 0 25px #ffaf29, 0 0 40px #ffaf29, 0 0 60px #ffaf29;
-    }
-  }
-  
-  /* Contact Us button animation */
-  #conbtn {
-    font-size: 18px;
-    font-weight: 500;
-    color: #25262a;
-    font-family: "Montserrat", Sans-serif;
-    background-color: #ffaf29;
-    color: #25262a;
-    border-radius: 1em;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 1em 2em;
-    cursor: pointer;
-    box-shadow: 0 0 0 0 black;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  #conbtn:hover {
-    transform: translateY(-5px); /* Slight upward movement */
-    background-color: #e39d22; /* Darker shade on hover */
-    animation: sparkling 1.5s infinite; /* Sparkling animation */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .blog-section {
-  padding: 100px ;
+  padding: 100px;
   background-color: #2d2e32;
   color: white;
 }
 
-
 .section-title {
-  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 30px;
-  color: var(--text-color);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffaf29;
 }
 
 .blog-cards {
@@ -178,15 +66,58 @@
 }
 
 footer {
-    background-color: #25262a;
-    padding: 20px 0;
+  background-color: #25262a;
+  padding: 20px 0;
+}
+
+.footer1 {
+  background-color: #25262a;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- MOBILE RESPONSIVE CSS BELOW --- */
+@media (max-width: 768px) {
+
+
+  .blog-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .blog-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blog-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-summary {
+    font-size: 0.9rem;
+  }
+
+  .read-more {
+    padding: 10px 16px;
+    font-size: 0.95rem;
   }
 
   .footer1 {
-    background-color: #25262a;
-    display: flex;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
   }
+
+  #conbtn {
+    font-size: 16px;
+    padding: 0.8em 1.6em;
+  }
+}

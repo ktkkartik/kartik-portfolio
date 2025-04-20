@@ -1,0 +1,235 @@
+:root {
+    --body-color: #2d2e32;
+    --nav-color: #2d2e32;
+    --side-nav: #e2e3e6;
+    --text-color: #FFF;
+    --search-text: #010718;
+    
+}
+nav {
+  position: relative;
+  padding: 47px 14px;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  background-color: var(--nav-color);
+  z-index: 100;
+}
+
+body.dark nav {
+  border: 1px solid #393838;
+
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--nav-color);
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+  color: var(--text-color);
+  font-size: 25px;
+  padding: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+nav .nav-bar .logo a {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menu .logo-toggle {
+  display: none;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar .nav-links li {
+  margin: 0 5px;
+  list-style: none;
+}
+
+.nav-links li a {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+  opacity: 1;
+}
+
+#conbtn {
+  font-size: 18px;
+  font-weight: 500;
+  color: #25262a;
+  font-family: "Montserrat", Sans-serif;
+  background-color: #ffaf29;
+  color: #25262a;
+  border-radius: 1em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  /* transition: all 0.3s ease-in-out; */
+  /* border: 1px solid black; */
+  box-shadow: 0 0 0 0 black;
+  text-decoration: none;
+
+}
+
+
+
+#conbtn:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+;
+
+@media (max-width: 990px) {
+  .contact-us-btn {
+      display: none;
+  }
+
+  .sidebarOpen {
+      display: block;
+  }
+}
+
+
+@media (max-width: 790px) {
+  nav .nav-bar .sidebarOpen {
+      display: block;
+      color: #e2e3e6;
+  }
+
+  .menu {
+      position: fixed;
+      height: 100%;
+      width: 320px;
+      left: -100%;
+      top: 0;
+      padding: 20px;
+      background-color: #2d2e32;
+      z-index: 100;
+      transition: all 0.4s ease;
+  }
+
+  #conbtn {
+      display: none;
+  }
+
+  nav.active .menu {
+      left: -0%;
+  }
+
+  nav.active .nav-bar .navLogo a {
+      opacity: 0;
+      transition: all 0.3s ease;
+  }
+
+  .menu .logo-toggle {
+      display: block;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .logo-toggle .siderbarClose {
+      color: var(--text-color);
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .nav-bar .nav-links {
+      flex-direction: column;
+      padding-top: 30px;
+  }
+
+  .nav-links li a {
+      display: block;
+      margin-top: 20px;
+  }
+}
+
+
+  
+  i {
+    color: var(--side-nav);
+    font-size: 2.5em;
+    text-align: center;
+}
+    
+    /* Contact Us button animation */
+    #conbtn {
+      font-size: 18px;
+      font-weight: 500;
+      color: #25262a;
+      font-family: "Montserrat", Sans-serif;
+      background-color: #ffaf29;
+      color: #25262a;
+      border-radius: 1em;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 1em 2em;
+      cursor: pointer;
+      box-shadow: 0 0 0 0 black;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    #conbtn:hover {
+      transform: translateY(-5px); /* Slight upward movement */
+      background-color: #e39d22; /* Darker shade on hover */
+      animation: sparkling 1.5s infinite; /* Sparkling animation */
+    }
+  
+
+    /* footer */
+  footer {
+    background-color: #25262a;
+    padding: 20px 0;
+  }
+
+  .footer1 {
+    background-color: #25262a;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
