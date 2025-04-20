@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/education.css">
+
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- External Styles and Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+ 
+    <title>Education</title>
+</head>
+<body>
+    <!--Nav bar-->
+    <nav>
+        <div class="nav-bar">
+          <a href="index.html" class="logo navLogo">
+            <img src="images/logo.png" alt="kartik logo" style="height: 50px;">
+          </a>
+          <div class="menu">
+            <div class="logo-toggle">
+              <span class="logo"><a href="index.html">Kartik</a></span>
+              <i class='bx bx-x sidebarClose'></i>
+            </div>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="certifications.html">Certifications</a></li>
+              <li><a href="myblog.html">Blog</a></li>
+              <li><a href="peopleiworkwith.html">People I Work With</a></li>
+          </ul>
+          </div>
+          <div class="contact-us-btn">
+            <a href="contact.html" id="conbtn">Contact Us</a>
+            <i class='bx bx-menu sidebarOpen'></i>
+          </div>
+        </div>
+      </nav>
+
+    <!--main Section-->
+    <section class="education-container">
+        <h1>My Education</h1>
+        
+        <!-- MCA Section -->
+        <div class="education-section" id="mca-section">
+            <div class="section-content" onclick="showPopup('mca-popup')">
+                <img src="images/cu.png" alt="MCA Image">
+                <h2>MCA (Master of Computer Applications)</h2>
+                <p>Click to know more about my MCA education</p>
+            </div>
+        </div>
+
+        <!-- BCA Section -->
+        <div class="education-section" id="bca-section">
+            <div class="section-content" onclick="showPopup('bca-popup')">
+                <img src="images/ignou.png" alt="BCA Image">
+                <h2>BCA (Bachelor of Computer Applications)</h2>
+                <p>Click to know more about my BCA education</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popups -->
+    <!-- MCA Details Popup -->
+    <div id="mca-popup" class="popup">
+        <div class="popup-content">
+            <h3>MCA (Master of Computer Applications)</h3>
+            <p>I am currently pursuing my Master of Computer Applications (MCA) from Chandigarh University for the academic session 2023–2025. <br>
+
+                This program is helping me strengthen my foundation in advanced computer science topics including software development, networking, data structures, and web technologies. <br>
+                
+                I am continuously working on practical projects to enhance my problem-solving and development skills, aiming to become a well-rounded software developer by the time I graduate in 2025.</p>
+            <button onclick="closePopup('mca-popup')">Close</button>
+        </div>
+    </div>
+
+    <!-- BCA Details Popup -->
+    <div id="bca-popup" class="popup">
+        <div class="popup-content">
+            <h3>BCA (Bachelor of Computer Applications)</h3>
+            <p>I have completed my Bachelor of Computer Applications (BCA) from Indira Gandhi National Open University (IGNOU) during the academic session 2020–2023. <br>
+
+                This program laid the foundation of my knowledge in programming, database management, web development, and computer networks. <br>
+                
+                It was during this time that I developed a keen interest in front-end development and started working on real-time projects that helped me sharpen my technical and creative skills.</p>
+            <button onclick="closePopup('bca-popup')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = "block";
+        }
+        
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = "none";
+        }
+    </script>
+
+       <!-- footer section  -->
+
+
+  <div class="footer1">
+
+    <div class="logo_sec">
+        <a href="index.html" class="logo navLogo">
+            <img src="images/logo.png" alt="kartik logo" style="height: 50px; margin-left: 50px;">
+</a>
+
+    </div>
+    <div class="infoo">
+        <h3 style="color: white; margin-right: 40px;">Hasta la vista!</h3>
+     </div>
+    </div>
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,253 @@
+nav {
+    position: relative;
+    padding: 47px 14px;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #2d2e32;
+    z-index: 100;
+  }
+  
+  nav .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav .nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  nav .nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .menu .logo-toggle {
+    display: none;
+  }
+  
+  .nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+  }
+  
+  /* Adding hover animation to navbar links */
+  .nav-links li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffaf29; /* Hover color for links */
+    transform: scale(1.1); /* Subtle scaling effect */
+    animation: sparkling 1.5s infinite; /* Sparkling animation */
+  }
+  
+  /* Sparkling effect keyframes */
+  @keyframes sparkling {
+    0% {
+        box-shadow: 0 0 5px #ffaf29, 0 0 10px #ffaf29, 0 0 15px #ffaf29;
+    }
+    25% {
+        box-shadow: 0 0 10px #ffaf29, 0 0 20px #ffaf29, 0 0 30px #ffaf29;
+    }
+    50% {
+        box-shadow: 0 0 15px #ffaf29, 0 0 25px #ffaf29, 0 0 40px #ffaf29;
+    }
+    75% {
+        box-shadow: 0 0 20px #ffaf29, 0 0 35px #ffaf29, 0 0 50px #ffaf29;
+    }
+    100% {
+        box-shadow: 0 0 25px #ffaf29, 0 0 40px #ffaf29, 0 0 60px #ffaf29;
+    }
+  }
+  
+  /* Contact Us button animation */
+  #conbtn {
+    font-size: 18px;
+    font-weight: 500;
+    color: #25262a;
+    font-family: "Montserrat", Sans-serif;
+    background-color: #ffaf29;
+    color: #25262a;
+    border-radius: 1em;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 black;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #conbtn:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+    background-color: #e39d22; /* Darker shade on hover */
+    animation: sparkling 1.5s infinite; /* Sparkling animation */
+  }
+
+/* Education Page Styles */
+body {
+    background-color: #2d2e32;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.education-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.education-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.education-section {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-section .section-content {
+    background-color: #3a3b3d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 500px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-section .section-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-section img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.education-section h2 {
+    font-size: 1.8rem;
+    color: #ffaf29;
+}
+
+.education-section p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    /* Ensures centering both horizontally and vertically */
+}
+
+.popup-content {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    /* This will make the popup content centered */
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h3 {
+    font-size: 2rem;
+    color: #ffaf29;
+    margin-bottom: 20px;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.popup-content button {
+    background-color: #ffaf29;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #e39d22;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .education-section .section-content {
+        width: 90%;
+    }
+}
+
+  
+/* footer */
+  footer {
+    background-color: #25262a;
+    padding: 20px 0;
+  }
+
+  .footer1 {
+    background-color: #25262a;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
