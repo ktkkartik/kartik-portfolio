@@ -1,23 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
+:root {
+  --nav-color: #3a3b3d;
+  --text-color: #ddd;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  background-color: #2d2e32;
 }
 
 .blog-section {
   padding: 100px;
   background-color: #2d2e32;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .section-title {
   text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ffaf29;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #ffaf29;
 }
 
 .blog-cards {
@@ -81,14 +92,13 @@ footer {
 
 /* --- MOBILE RESPONSIVE CSS BELOW --- */
 @media (max-width: 768px) {
-
-
   .blog-section {
     padding: 40px 20px;
   }
 
   .section-title {
     font-size: 1.6rem;
+    margin-bottom: 30px;
   }
 
   .blog-cards {

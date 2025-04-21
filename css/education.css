@@ -5,12 +5,16 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Make sure main content stretches full height */
 .education-container {
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 40px;
+    margin: 40px 20px;
     color: #ffaf29;
 }
 
@@ -24,6 +28,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .education-section .section-content {
@@ -35,6 +41,7 @@ body {
     cursor: pointer;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .education-section .section-content:hover {
@@ -64,15 +71,11 @@ body {
 .popup {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
     justify-content: center;
     align-items: center;
-    /* Ensures centering both horizontally and vertically */
 }
 
 .popup-content {
@@ -81,13 +84,8 @@ body {
     padding: 30px;
     border-radius: 12px;
     max-width: 600px;
-    width: 80%;
+    width: 90%;
     text-align: center;
-    position: relative;
-    /* This will make the popup content centered */
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -120,8 +118,25 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .education-container {
+        font-size: 2em;
+        margin: 30px 10px;
+    }
+
     .education-section .section-content {
-        width: 90%;
+        width: 100%;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    .popup-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .popup-content button {
+        padding: 8px 16px;
+        font-size: 0.95rem;
     }
 }
-

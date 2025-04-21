@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+  --body-color: #25262A;
+  --text-color: #ffffff;
+  --accent-color: #ffaf29;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,20 +13,31 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  height: 100%;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/* Main section covers full viewport */
 .people-section {
+  min-height: 100vh;
   padding: 60px 20px;
   background-color: var(--body-color);
   color: var(--text-color);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-title {
-  text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ffaf29;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--accent-color);
 }
 
+/* People grid */
 .people-container {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +45,7 @@
   gap: 30px;
 }
 
+/* Individual card */
 .person-card {
   background-color: #ffffff0c;
   border-radius: 16px;
@@ -67,7 +85,7 @@
 .person-card a {
   display: inline-block;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   background-color: var(--accent-color);
   padding: 8px 16px;
   border-radius: 8px;
@@ -79,16 +97,36 @@
   background-color: #e89d21;
 }
 
+/* Footer styles */
 footer {
-    background-color: #25262a;
-    padding: 20px 0;
+  background-color: var(--body-color);
+  padding: 20px 0;
+}
+
+.footer1 {
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
   }
 
-  .footer1 {
-    background-color: #25262a;
-    display: flex;
-    height: 100px;
+  .person-card {
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    max-width: 90%;
   }
+
+  .people-container {
+    gap: 20px;
+  }
+}

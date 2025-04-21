@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+  --bg-color: #2d2e32;
+  --text-color: #fff;
+  --accent: #ffaf29;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +13,27 @@
   font-family: 'Poppins', sans-serif;
 }
 
-:root {
-  --bg-color: #2d2e32;
-  --text-color: #fff;
-  --accent: #ffaf29;
-}
-/*main*/
-
-.certifications-section {
-  padding: 60px 20px;
+html, body {
+  height: 100%;
   background-color: var(--bg-color);
   color: var(--text-color);
-  text-align: center;
+}
+
+/* Main Section */
+.certifications-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .section-title {
   text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #ffaf29;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: var(--accent);
 }
 
 .certifications-container {
@@ -75,11 +83,11 @@
   margin-top: 10px;
 }
 
-/* Popup styling */
+/* Popup Styling */
 .popup {
   display: none;
   position: fixed;
-  z-index: 99;
+  z-index: 999; /* Increased to stay above nav */
   top: 0;
   left: 0;
   height: 100vh;
@@ -99,27 +107,52 @@
 
 .popup .close {
   position: absolute;
-  top: 40px;
-  right: 50px;
+  top: 20px;
+  right: 20px;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
+  z-index: 1000; /* Ensures it's on top of everything */
 }
 
-
-
+/* Footer */
 footer {
-    background-color: #25262a;
-    padding: 20px 0;
+  background-color: #25262a;
+  padding: 20px 0;
+}
+
+.footer1 {
+  background-color: #25262a;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .cert-card {
+    width: 90%;
+    max-width: 300px;
   }
 
   .footer1 {
-    background-color: #25262a;
-    display: flex;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    gap: 10px;
   }
 
-  
+  .popup .close {
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+  }
+}
